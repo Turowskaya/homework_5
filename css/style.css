@@ -1,0 +1,152 @@
+.page_background{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.man_ball_juggling{
+    background-color: white;
+    width: 325px;
+    height: 355px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.man_head{
+    width: 55px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: transparent;
+    margin: 65px auto 15px;
+}
+.man_corps {
+    width: 105px;
+    height: 120px;
+    border: 1px solid black;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    transform: perspective(105px) rotateX(-15deg);
+}
+.man_arms {
+    position: relative;
+    top: -130px;
+    margin-bottom: calc(38px - 25px/2);
+}
+.arms{
+    width: 1px;
+    height: 110px;
+    background-color: black;
+}
+.man_arm_left{
+    float:left;
+    position: absolute;
+    left: 99px;
+    animation: arm_left 1s linear 0s infinite normal;
+    transform-origin: 50% 0;
+}
+.man_arm_right{
+    float:right;
+    position: absolute;
+    right: 99px;
+    animation: arm_right 1s linear 0s infinite normal;
+    transform-origin: 50% 0;
+}
+.man_arm_left:after{
+    content: "";
+    width: 55px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top:109px;
+    animation: arm_left_after 1s ease-out 0s infinite normal;
+    transform-origin: 0 50%;
+}
+.man_arm_right:after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top:109px;
+    animation: arm_right_after 1s linear 0s infinite normal;
+    transform-origin: 0 50%;
+}
+.ball{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: red;
+}
+.ball_left_1{
+    position: relative;
+    left: 32px;
+    top: -60px;
+    animation: ball_1 2s ease-out 0ms infinite normal;
+}
+.ball_left_2{
+    position: absolute;
+    left: 137px;
+    top: 239px;
+    animation: ball_2 2s ease-out 2000ms infinite normal;
+}
+.ball_right_3{
+    position: relative;
+    left: 261px;
+    top: -85px;
+    animation: ball_3 2s linear 1500ms infinite normal;
+}
+.ball_right_4{
+    position: relative;
+    left: 162px;
+    top: -111px;
+    /* background: green; */
+    animation: ball_4 2s linear 1500ms infinite normal;
+}
+@keyframes arm_left {
+    0%{transform: rotate(-5deg)}
+    100%{transform: rotate(5deg)}
+}
+@keyframes arm_left_after {
+    25% {transform:rotate(-90deg)}
+    50% {transform:rotate(-180deg)}
+    100% {transform:rotate(-360deg)}
+}
+@keyframes arm_right {
+    0%{transform: rotate(5deg)}
+    100%{transform: rotate(-5deg)}
+}
+@keyframes arm_right_after {
+    25% {transform:rotate(90deg)}
+    50% {transform:rotate(180deg)}
+    100% {transform:rotate(360deg)}
+}
+@keyframes ball_1 {
+    0%{transform: none}
+    25%{transform: translate(50px, 60px)}
+    50%{transform: translateX(100px)}
+    75%{transform: translate(50px, -230px)}
+}
+@keyframes ball_2 {
+    0%{transform: none}
+    25%{transform: translate(-50px, -230px)}
+    50%{transform: translateX(-100px)}
+    75%{transform: translate(-50px, 60px)}
+}
+@keyframes ball_3 {
+    0%{transform: none}
+    25%{transform: translate(-50px, 60px)}
+    50%{transform: translateX(-100px)}
+    75%{transform: translate(-50px, -230px)}
+}
+@keyframes ball_4 {
+    0%{transform: none}
+    25%{transform: translate(50px, -230px)}
+    50%{transform: translateX(100px)}
+    75%{transform: translate(50px, 60px)}
+}
+
