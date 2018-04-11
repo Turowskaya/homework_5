@@ -63,7 +63,7 @@
     background-color: black;
     position: absolute;
     top:109px;
-    animation: arm_left_after 1s ease-out 0s infinite normal;
+    animation: arm_left_after 1s linear 0s infinite normal;
     transform-origin: 0 50%;
 }
 .man_arm_right:after{
@@ -86,13 +86,13 @@
     position: relative;
     left: 32px;
     top: -60px;
-    animation: ball_1 2s ease-out 0ms infinite normal;
+    animation: ball_1 2s linear 0ms infinite normal;
 }
 .ball_left_2{
     position: absolute;
     left: 137px;
     top: 239px;
-    animation: ball_2 2s ease-out 2000ms infinite normal;
+    animation: ball_2 2s linear 2000ms infinite normal;
 }
 .ball_right_3{
     position: relative;
@@ -104,8 +104,7 @@
     position: relative;
     left: 162px;
     top: -111px;
-    /* background: green; */
-    animation: ball_4 2s linear 1500ms infinite normal;
+   animation: ball_4 2s linear 1500ms infinite normal;
 }
 @keyframes arm_left {
     0%{transform: rotate(-5deg)}
